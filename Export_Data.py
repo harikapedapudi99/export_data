@@ -1,6 +1,6 @@
 
 from datetime import datetime, timedelta
-from snowflake.snowpark import Session
+from snowflake.snowpark.session import Session
 import snowflake.connector
 import plotly.graph_objects as go
 import json 
