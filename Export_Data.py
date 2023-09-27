@@ -1,4 +1,3 @@
-
 from datetime import datetime, timedelta
 from snowflake.snowpark.session import Session
 import snowflake.connector
