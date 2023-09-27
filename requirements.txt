@@ -8,3 +8,4 @@ streamlit
 streamlit_option_menu
 datetime
 plotly
+pyarrow==10.0.1
