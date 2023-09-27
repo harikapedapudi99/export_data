@@ -3,7 +3,6 @@ from datetime import datetime, timedelta
 from snowflake.snowpark import Session
 import snowflake.connector
 import plotly.graph_objects as go
-from app_data_model import SnowpatrolDataModel
 import json 
 import streamlit as st
 from streamlit_extras.colored_header import colored_header
@@ -79,18 +78,18 @@ def get_available_warehouses(role):
 #      initial_sidebar_state="expanded"
 # )
 # #st.header(":rotating_light: Snowpatrol - License Optimization")
-image = Image.open("SnowPatrol.png")
-with st.container() as mp:
-    st.markdown('<style>div.block-container{padding-bottom :0px; padding-right :10px; padding-top :30px;padding-left :10px; margin:10px; }</style>',unsafe_allow_html=True)
-    m1,m2=st.columns(2,gap="small")
-    with m1:
-        st.image(image,width=250 )
-    with m2:
-        st.markdown(
-        "<div style='text-align: right; font-size: 20px; font-family: Arial; color:rgb(0,0,100); font-weight: bold; '>Export Data</div>",
-        unsafe_allow_html=True,
-        )
-st.markdown('<hr style="margin-top: 0px; margin-bottom: 0px;">', unsafe_allow_html=True)
+# image = Image.open("SnowPatrol.png")
+# with st.container() as mp:
+#     st.markdown('<style>div.block-container{padding-bottom :0px; padding-right :10px; padding-top :30px;padding-left :10px; margin:10px; }</style>',unsafe_allow_html=True)
+#     m1,m2=st.columns(2,gap="small")
+#     with m1:
+#         st.image(image,width=250 )
+#     with m2:
+#         st.markdown(
+#         "<div style='text-align: right; font-size: 20px; font-family: Arial; color:rgb(0,0,100); font-weight: bold; '>Export Data</div>",
+#         unsafe_allow_html=True,
+#         )
+# st.markdown('<hr style="margin-top: 0px; margin-bottom: 0px;">', unsafe_allow_html=True)
 # with col3:
 #     # st.write("")
 #     st.header(":blue[OVERVIEW]")
@@ -173,10 +172,7 @@ def build_UI():
 
             end_date = st.date_input("To Date")
             
-            app_list = active_licenses['APP_NAME'].unique()
-            app_name = st.selectbox(label=" # App Name", options=app_list)
-                
-            app_id = int(active_licenses[active_licenses.APP_NAME == app_name].reset_index().at[0,'APP_ID'])
+            app_id=1
             # include = st.selectbox(
             #     label="Application",
             #     options=["Udemy","PowerBi","Azure DevOps","Microsoft Office -365"],  # Replace with your department options
