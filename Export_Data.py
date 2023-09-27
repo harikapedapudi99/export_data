@@ -1,3 +1,4 @@
+from app_data_model import SnowpatrolDataModel
 from datetime import datetime, timedelta
 from snowflake.snowpark.session import Session
 import snowflake.connector
