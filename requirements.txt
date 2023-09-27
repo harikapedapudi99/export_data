@@ -7,3 +7,4 @@ streamlit-extras
 streamlit
 streamlit_option_menu
 datetime
+plotly
