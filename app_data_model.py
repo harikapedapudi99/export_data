@@ -8,7 +8,7 @@ import streamlit as st
 
 sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
 
-from python.snowpatrol import constants
+import constants
 
 class SnowpatrolDataModel:
     st.markdown('<style>div.block-container{padding-top:2rem;}</style>',unsafe_allow_html=True) 
